@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600&display=swap");
+body {
+    background-color: black;
+
+}
+#title{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    color: white;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.multi-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.multi-button button {
+  background: black;
+  border: 0.125em solid white;
+  color: white;
+  cursor: pointer;
+  font: 600 1.5rem/1.25 "Montserrat", sans-serif;
+  letter-spacing: 0.125em;
+  margin: 0.4rem;
+  padding: 0.5em 0.75em;
+  position: relative;
+  text-transform: uppercase;
+}
+.multi-button button:before, .multi-button button:after {
+  content: "";
+  position: absolute;
+  transition: all 0.125s ease-in-out;
+}
+.multi-button button.cut {
+  background: none;
+  border-color: transparent;
+}
+.multi-button button.cut:before, .multi-button button.cut:after {
+  transition: all 0.175s ease-in-out;
+}
+.multi-button button.cut:before {
+  background: white;
+  border: 0px dashed white;
+  left: -0.125em;
+  top: -0.125em;
+  right: -0.125em;
+  bottom: -0.125em;
+  z-index: -1;
+}
+.multi-button button.cut:hover:before, .multi-button button.cut:focus:before {
+  background: black;
+  border-width: 0.125em;
+}
+.multi-button button.cut:after {
+  background: black;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.multi-button button.copy:after {
+  border: 0.125em dashed white;
+  bottom: -0.125em;
+  left: -0.125em;
+  right: -0.125em;
+  top: -0.125em;
+  z-index: -1;
+}
+.multi-button button.copy:hover:after, .multi-button button.copy:focus:after {
+  bottom: -0.375em;
+  left: 0.125em;
+  right: -0.375em;
+  top: 0.125em;
+}
+.effect {
+
+  }
+  .effect .buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* styles for a common effect !!!YOU NEED THEM */
+  .effect {
+    /*display: flex; !!!uncomment this line !!!*/
+  }
+  .effect a {
+    text-decoration: none !important;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    font-size: 20px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    border: 2px solid white;
+  }
+  .effect a i {
+    position: relative;
+    z-index: 3;
+  }
+  .effect a:last-child {
+    margin-right: 0px;
+  }
+  .effect a:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .effect a i {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .effect.thurio a {
+    transition: border-radius 0.2s linear 0s;
+    transform: rotate(45deg);
+  }
+  .effect.thurio a i {
+    transition: transform 0.01s linear 0s;
+    transform: rotate(-45deg);
+  }
+  .effect.thurio a:hover {
+    border-radius: 0px;
+  }
+.middle{
+
+}
